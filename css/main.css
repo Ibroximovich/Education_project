@@ -1,4 +1,5 @@
 * {
+
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -10,7 +11,7 @@ body {
   font-family: "Livvic", sans-serif;
 }
 
-.container {
+.containers {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 13px;

@@ -6,58 +6,62 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="icon" href="./images/header-logo.svg">
     <title>Document</title>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
 </head>
 <body>
     <!-- site header  -->
-    <header class="site-header">
-        <div class="container header">
-            <a href="#" class="header__logo-link">
+    <header class="bg-[#5855E7] py-[9px] lg:py-[16px] sm:py-[9px]">
+        <div class="containers flex items-center justify-between">
+            <a href="#" >
                 <img src="./images/header-logo.svg" alt="header logo" width="156" height="111">
+
             </a>
-            <nav class="header__navbar">
-                <a href="#">О нашей школе</a>
-                <a href="#">Преимущества</a>
-                <a href="#">Классы</a>
-                <a href="#">Контакты</a>
+            <nav class="flex items-center gap-[45px] hidden lg:flex items-center gap-[45px]">
+                <a class="font-medium text-[24px] leading-[100%] text-white"   href="#">О нашей школе</a>
+                <a href="#" class="font-medium text-[24px] leading[100%] text-white">Преимущества</a>
+                <a href="#" class="font-medium text-[24px] leading-[100%] text-white">Классы</a>
+                <a href="#" class="font-medium text-[24px] leading-[100%] text-white">Контакты</a>
             </nav>
-            <div class="header__btns-wrapper">
-                <button class="header__contact-btn">Связаться с нами</button>
-                <button class="header__mobile-phone">
+            <div class="flex items-center justify-start gap-[15px]">
+                <button class="py-[11px] px-[35px] bg-[#FFFFFF]  rounded-[10px] font-medium text-[24px] leading-[100%] text-black duration-300 hover:bg-[rgba(255,255,255,0.8)]  transform active:scale-90 hidden lg:block sm:block md:block">Связаться с нами</button>
+                <button class="block  sm:hidden lg:hidden">
                     <img src="./images/Call.svg" alt="header phone" width="30" height="30">
                 </button>
-                <button class="header__menyu-btn">
+                <button class="lg:hidden">
                     <img src="./images/header-btn.svg" alt="logo" width="30" height="30">
                 </button>
             </div>
         </div>
     </header>
      <!-- Site main  -->
-    <main>
-        <section class="site-hero">
-            <div class="container hero">
-                <div class="hero__words-wrapper">
-                    <h2 class="hero__words-title"><span class="hero__words-title hero__words-title--span">The Best Future Stars</span>- мы заботимся о будущем вашего ребенка</h2>
-                    <p class="hero__words-text">Наши опытные преподователи сделают процесс обучения максимально интересным и эффективным для вашего ребенка </p>
-                    <div class="hero__words-btns">
-                        <button class="hero__tel-btn">Позвонить</button>
-                        <button class="hero__info-btn">Подробнее</button> 
+     <main> 
+         <section class="!pt-[180px] overflow-hidden relative !pb-[142px] bg-[fafafa]">
+            <div class="containers">
+                <div class="max-w-[568px] flex flex-col gap-10">
+                    <h2 class="font-bold text-[40px] leading-[100%] text-[#000]"><span class="text-[#5855E7]">The Best Future Stars</span>- мы заботимся о будущем вашего ребенка</h2>
+                    <p class="font-normal text-[18px] leading-[100%] text-[#000000]">Наши опытные преподователи сделают процесс обучения максимально интересным и эффективным для вашего ребенка </p>
+                    <div class="flex items-center justify-between">
+                        <a class="!w-[47%] font-medium text-[36px] border-[3px] border-transparent leading-[100%] text-white py-[7px] text-center bg-[#6347EB] rounded-[10px] duration-300 hover:bg-[#FFFFFF] hover:text-[#000000] hover:border-[#6347EB] transform active:scale-90" href="tel:">Позвонить</a>
+                        <button class="!w-[47%] font-medium text-[36px] leading-[100%] border-[3px] border-[#6347EB] text-black duration-300 hover:text-white py-[7px] text-center bg-transparent rounded-[10px] hover:bg-[#6347EB] transform  active:scale-90">Подробнее</button> 
                     </div>
                 </div>
-                <div>
-                    <img class="hero__words-img" src="./images/child-img.png" alt="child img" width="680" height="648">   
-                </div>
-                </div>
-
             </div>
+            <img class="absolute right-0 top-0" src="./images/child-img.png" alt="child img" >   
         </section> 
         <!--  About section  -->
           <section>
               <h2 class="about__words-title-responsive">О нас</h2>
-            <div class="container about">
-                <img class="about__img" src="./images/school-img.png" alt="logo" width="534" height="492">
+            <div class="containers flex items-center justify-between gap-[46px] py-[214px]">
+                <img class="duration-700  transform hover:scale-110" src="./images/school-img.png" alt="logo" width="534" height="492">
                 <div class="about__words-wrapper">
-                    <h2 class="about__words-title">О нас</h2>
-                    <p  class="about__words-text">Для комфортного образования и времяпровождения, мы  объединяем 
+                    <h2 class="mt-[20px] mb-[40px] font-bold text-[40px] leading-[100%] text-black">О нас</h2>
+                    <p  class="max-w-[584px] font-regular text-[24px] leading-[100%]">Для комфортного образования и времяпровождения, мы  объединяем 
                         детей небольшими комфортными группами, которые разделяются по возрастным категориям, а также и по образовательным направлениям. Индивидуальный подход к каждому ребёнку. В классе не более 10 учеников. Углублённое изучение английского языка.Кроме этого, мы отправляем наших детей на языковую практику за рубеж. Обучение с 8.00 до 17.00;
                          3-х разовое сбалансированное питание ( по желанию), выполнение домашних заданий <br><br>
                          Все условия и комфорт для ваших детей!  
@@ -65,83 +69,165 @@
                 </div>
             </div>
          </section> 
-       <section class="advantages-section"> 
-            <!-- Our advantages section  -->
-             <div class="container advantages">
-                <h2 class="advantages__title">Наши преимущества</h2>
-                <div class="advantages__wrapper">
-                    <div class="advantages__img-and-words advantages__img-and-words-width-1">
-                        <img src="./images/advantages-1.svg" alt="advantages logo" width="209" height="209" style="border-radius: 50%;">
-                        <h3 class="advantages__words-title">3-х разовое питание </h3>
-                        <p class="advantages__words-text">Для комфотрного времяпровождения в нашей школе, мы готовим вкусную и полезную еду 3 раза в день</p>
+         <!-- Our advantages section  -->
+        <section class="pt-[73px] pb-[75px] bg-[#5855E7]"> 
+             <div class="containers text-center">
+                <h2 class="mb-[92px] font-bold text-[40px] text-white">Наши преимущества</h2>
+                <div class="flex items-center justify-center gap-[80px] flex-wrap">
+                    <div class=" max-w-[261px] duration-700  transform hover:scale-110">
+                        <img class="m-auto rounded-[50%]" src="./images/advantages-1.svg" alt="advantages logo" width="209" height="209">
+                        <h3 class="mt-[35px] mb-[20px] font-bold text-[24px] leading-[100%] text-white">3-х разовое питание </h3>
+                        <p class="font-regular text-[18px] leading-[100%] text-white">Для комфотрного времяпровождения в нашей школе, мы готовим вкусную и полезную еду 3 раза в день</p>
                     </div>
-                    <div class="advantages__img-and-words advantages__img-and-words-width-2">
-                        <img src="./images/advantages-2.svg" alt="advantages logo" width="209" height="209" style="border-radius: 50%;">
-                        <h3 class="advantages__words-title">IT технологии </h3>
-                        <p class="advantages__words-text">21 век- это век информационных технологий. Ваш ребенок сможет научиться азам програмированния, тенденциям в мире гаджетов и профессиям будущего</p>
+                    <div class="max-w-[375px] duration-700  transform hover:scale-110">
+                        <img class="m-auto rounded-[50%]" src="./images/advantages-2.svg" alt="advantages logo" width="209" height="209">
+                        <h3 class="mt-[35px] mb-[20px] font-bold text-[24px] leading-[100%] text-white">IT технологии </h3>
+                        <p class="font-regular text-[18px] leading-[100%] text-white">21 век- это век информационных технологий. Ваш ребенок сможет научиться азам програмированния, тенденциям в мире гаджетов и профессиям будущего</p>
                     </div>
-                    <div class="advantages__img-and-words advantages__img-and-words-width-3">
-                        <img src="./images/advantages-3.svg" alt="advantages logo" width="209" height="209" style="border-radius: 50%;">
-                        <h3 class="advantages__words-title">Ментальная арифметика</h3>
-                        <p class="advantages__words-text">Мы обучим детей быстро вычислять в уме сложные математические рассчёты</p>
+                    <div class="max-w-[288px] duration-700  transform hover:scale-110">
+                        <img class="rounded-[50%] m-auto" src="./images/advantages-3.svg" alt="advantages logo" width="209" height="209" >
+                        <h3 class="mt-[35px] mb-[20px] font-bold text-[24px] leading-[100%] text-white">Ментальная арифметика</h3>
+                        <p class="font-regular text-[18px] leading-[100%] text-white">Мы обучим детей быстро вычислять в уме сложные математические рассчёты</p>
                     </div>
-                    <div class="advantages__img-and-words advantages__img-and-words-width-4">
-                        <img src="./images/advantages-4.svg" alt="advantages logo" width="209" height="209" style="border-radius: 50%;">
-                        <h3 class="advantages__words-title">Общение на английском языке </h3>
-                        <p class="advantages__words-text">Для свободного общения на английском языке, у нас предусматривается целый день Speaking</p>
+                    <div class="max-w-[354px] duration-700  transform hover:scale-110">
+                        <img  class="rounded-[50%] m-auto" src="./images/advantages-4.svg" alt="advantages logo" width="209" height="209" >
+                        <h3 class="mt-[35px] mb-[20px] font-bold text-[24px] leading-[100%] text-white">Общение на английском языке </h3>
+                        <p class="font-regular text-[18px] leading-[100%] text-white">Для свободного общения на английском языке, у нас предусматривается целый день Speaking</p>
                     </div>
-                    <div class="advantages__img-and-words advantages__img-and-words-width-5">
-                        <img src="./images/advantages-5.svg" alt="advantages logo" width="209" height="209" style="border-radius: 50%;">
-                        <h3 class="advantages__words-title">Иностранные языки </h3>
-                        <p class="advantages__words-text">Наши высококвалифицированные учителя обучат детей: Английскому, русскому, арабскому и китайскому языку</p>
+                    <div class="max-w-[302px] duration-700  transform hover:scale-110">
+                        <img class="m-auto rounded-[50%]" src="./images/advantages-5.svg" alt="advantages logo" width="209" height="209" >
+                        <h3 class="font-bold mt-[35px] mb-[20px] text-[24px] leading-[100%] text-white">Иностранные языки </h3>
+                        <p class="font-regular text-[18px] leading-[100%] text-white">Наши высококвалифицированные учителя обучат детей: Английскому, русскому, арабскому и китайскому языку</p>
                     </div>
                 </div>
             </div>
-         </section> 
-         <section class="class-wrapper-section">
-            <div class="container class">
-                <h2 class="class__h2">Классы</h2>
-                <h3 class="class__h3">Классы</h3>
-                <div class="class__wrapper">
-                    <div class="class__wrapper-content">
+         </section>  
+         <!-- Class section  -->
+          <section class="class-wrapper-section">
+            <div class="containers class">
+                <h2 class="mt-[146px] font-bold text-[96px] leading-[100%]  text-[#EEEEEE]">Классы</h2>
+                <h3 class="mb-[105px] font-bold text-[40px] leading-[100%] text-black">Классы</h3>
+                <div class="flex items-start justify-center gap-[86px] flex-wrap">
+                    <div class="bg-[#5855E7] rounded-[15px] pt-[19px] pr-[17px] pb-[33px] pl-[19px] max-w-[310px] duration-700  transform hover:scale-110 active:scale-90">
                         <img src="./images/class-1.png" alt="logo" width="265" height="251">
-                        <h3 class="class__content-h3">1 классы</h3>
-                        <h4 class="class__content-h4">6-7 лет</h4>
-                        <p class="class__content-p">Изучение калиграфии, логопедия, английский этикет, разговорный английский, общеобразовательные предметы и спортивные занятия</p>
-                        <button class="class__content-btn">Записаться</button>
+                        <h3 class="mt-[25px] font-semibold text-[30px] leading-[100%] text-white">1 классы</h3>
+                        <h4 class="mt-[15px] font-medium text-[18px] leading-[100%] text-white">6-7 лет</h4>
+                        <p class="mt-[20px] mb-[30px] font-bold text-[14px] leading-[100%] text-white tracking-[1px]">Изучение калиграфии, логопедия, английский этикет, разговорный английский, общеобразовательные предметы и спортивные занятия</p>
+                        <button class="py-[25px] px-[35px] bg-[#FFFFFF] font-normal text-[24px] leading-[0%] text-[#6347EB] rounded-[10px] duration-300 hover:bg-[rgba(255,255,255,0.8)] active:scale-90">Записаться</button>
                     </div>
-                    <div class="class__wrapper-content">
+                    <div class="bg-[#5855E7] rounded-[15px] pt-[19px] pr-[17px] pb-[33px] pl-[19px] max-w-[310px] duration-700  transform hover:scale-110 active:scale-90">
                         <img src="./images/class-2.png" alt="logo" width="265" height="251">
-                        <h3 class="class__content-h3">2 классы</h3>
-                        <h4 class="class__content-h4">7-8 лет</h4>
-                        <p class="class__content-p">Английский 1 step, китайский язык, арифметика, логическое мышление, общеобразовательные предметы и спортивные занятия</p>
-                        <button class="class__content-btn">Записаться</button>
+                        <h3 class="mt-[25px] font-semibold text-[30px] leading-[100%] text-white">2 классы</h3>
+                        <h4 class="mt-[15px] font-medium text-[18px] leading-[100%] text-white">7-8 лет</h4>
+                        <p class="mt-[20px] mb-[30px] font-bold text-[14px] leading-[100%] text-white tracking-[1px]">Английский 1 step, китайский язык, арифметика, логическое мышление, общеобразовательные предметы и спортивные занятия</p>
+                        <button class="py-[25px] px-[35px] bg-[#FFFFFF] font-normal text-[24px] leading-[0%] text-[#6347EB] rounded-[10px] duration-300 hover:bg-[rgba(255,255,255,0.8)] active:scale-90" >Записаться</button>
                     </div>
-                    <div class="class__wrapper-content">
+                    <div class="bg-[#5855E7] rounded-[15px] pt-[19px] pr-[17px] pb-[33px] pl-[19px] max-w-[310px] duration-700  transform hover:scale-110 active:scale-90">
                         <img src="./images/class-3.png" alt="logo" width="265" height="251">
-                        <h3 class="class__content-h3">3 классы</h3>
-                        <h4 class="class__content-h4">8-9 лет</h4>
-                        <p class="class__content-p">Английский 2 step, арабский язык, психология, ментальная арифметика, IT технологии, общеобразовательные предметы и спортивные занятия</p>
-                        <button class="class__content-btn">Записаться</button>
+                        <h3 class="mt-[25px] font-semibold text-[30px] leading-[100%] text-white">3 классы</h3>
+                        <h4 class="mt-[15px] font-medium text-[18px] leading-[100%] text-white">8-9 лет</h4>
+                        <p class="mt-[20px] mb-[30px] font-bold text-[14px] leading-[100%] text-white tracking-[1px]">Английский 2 step, арабский язык, психология, ментальная арифметика, IT технологии, общеобразовательные предметы и спортивные занятия</p>
+                        <button class="py-[25px] px-[35px] bg-[#FFFFFF] font-normal text-[24px] leading-[0%] text-[#6347EB] rounded-[10px] duration-300 hover:bg-[rgba(255,255,255,0.8)] active:scale-90">Записаться</button>
                     </div>
-                    <div class="class__wrapper-content">
+                    <div  class="bg-[#5855E7] rounded-[15px] pt-[19px] pr-[17px] pb-[33px] pl-[19px] max-w-[310px] duration-700  transform hover:scale-110 active:scale-90">
                         <img src="./images/class-4.png" alt="logo" width="265" height="251">
-                        <h3 class="class__content-h3">4 классы</h3>
-                        <h4 class="class__content-h4">9-10 лет</h4>
-                        <p class="class__content-p">Английский 3 step, французский и немецкий язык,  IT технологии, общеобразовательные предметы и спортивные занятия</p>
-                        <button class="class__content-btn">Записаться</button>
+                        <h3 class="mt-[25px] font-semibold text-[30px] leading-[100%] text-white">4 классы</h3>
+                        <h4  class="mt-[15px] font-medium text-[18px] leading-[100%] text-white">9-10 лет</h4>
+                        <p class="mt-[20px] mb-[30px] font-bold text-[14px] leading-[100%] text-white tracking-[1px]">Английский 3 step, французский и немецкий язык,  IT технологии, общеобразовательные предметы и спортивные занятия</p>
+                        <button class="py-[25px] px-[35px] bg-[#FFFFFF] font-normal text-[24px] leading-[0%] text-[#6347EB] rounded-[10px] duration-300 hover:bg-[rgba(255,255,255,0.8)] active:scale-90">Записаться</button>
                     </div>
-                    <div class="class__wrapper-content">
+                    <div class="bg-[#5855E7] rounded-[15px] pt-[19px] pr-[17px] pb-[33px] pl-[19px] max-w-[310px] duration-700  transform hover:scale-110 active:scale-90">
                         <img src="./images/class-5png.png" alt="logo" width="265" height="251">
-                        <h3 class="class__content-h3">0 классы</h3>
-                        <h4 class="class__content-h4">4-5 лет</h4>
-                        <p class="class__content-p">Математика, логическое мышление, пропись, изо студия, IT технологии, робототехника гимнастика, таэквондо</p>
-                        <button class="class__content-btn">Записаться</button>
+                        <h3 class="mt-[25px] font-semibold text-[30px] leading-[100%] text-white">0 классы</h3>
+                        <h4 class="mt-[15px] font-medium text-[18px] leading-[100%] text-white">4-5 лет</h4>
+                        <p class="mt-[20px] mb-[30px] font-bold text-[14px] leading-[100%] text-white tracking-[1px]">Математика, логическое мышление, пропись, изо студия, IT технологии, робототехника гимнастика, таэквондо</p>
+                        <button class="py-[25px] px-[35px] bg-[#FFFFFF] font-normal text-[24px] leading-[0%] text-[#6347EB] rounded-[10px] duration-300 hover:bg-[rgba(255,255,255,0.8)] active:scale-90">Записаться</button>
                     </div>
                 </div>
             </div>
          </section> 
-    </main>
-    salom
+         <section>
+             <div class="containers">
+                <h2 class="mt-[118px] font-bold text-[96px] leading-[100%]  text-[#EEEEEE] text-center">Связаться</h2>
+                <h3 class="mb-[81px] font-bold text-[40px] leading-[100%] text-black text-center">Связаться с нами </h3>
+                <div class="bg-[#5855E7] px-[50px] pt-[50px] pb-[69px] rounded-[15px] flex gap-[144px]">
+                    <ul class="max-w-[424px]">
+                        <li>
+                        <h2 class="font-normal text-[40px] leading-[100%] text-white mb-[28px]">Контакты</h2>    
+                        </li>
+                        <li class="flex items-center gap-[12px] mb-[41px]">
+                        <div class="w-5 h-5 bg-fuchsia-500 mt-1"></div>
+                        <p class="font-normal text-[24px] leading-[100%] text-white">г.Ташкент, Чиланзар 16-й квартал, ул. Ботирма</p>
+                        </li>
+                        <li class="flex items-center gap-[12px] mb-[41px]">
+                            <div class="w-5 h-5 bg-fuchsia-500"></div>
+                            <p class="font-normal text-[24px] leading-[100%] text-white">+998970020771</p>
+                        </li>
+                        <li class="flex items-center gap-[12px] mb-[41px]">
+                            <div class="w-5 h-5 bg-fuchsia-500"></div>
+                            <p class="font-normal text-[24px] leading-[100%] text-white">+998971970771 (Пн.-Пт. с 09:00 до 17:00)</p>
+                        </li>
+                        <li>
+                            <img class="duration-700 transform hover:scale-105"  src="./images/school-img.png" alt="school img" width="485" height="338">
+                        </li>
+                    </ul>
+                    <div >
+                        <div> 
+                            <h2 class="font-normal text-[40px] leading-[100%] text-white mb-[28px]">Контакты</h2>  
+                        </div>
+                        <div>
+                            <p class="font-regular text-[18px] leading-[100%] text-white max-w-[329px] mb-[20px]">В честь открытия нашей школы дарим скидку -20%</p>
+                        </div>
+                        <div>
+                            <form class="flex flex-col gap-[26px]" action="#" method="#">
+                            <input class="pt-[15px] pl-[12px] pb-[19px] rounded-[5px] max-w-[100%]" type="text" placeholder="Имя"> 
+                            <input class="pt-[15px] pl-[12px] pb-[19px] rounded-[5px] max-w-[100%]" type="text" placeholder="Фамилия">
+                            <input class="pt-[20px] pl-[13px] pb-[284px] rounded-[5px] max-w-[100%]" type="tel" placeholder="Номер">
+                            <button class="bg-[#FFFFFF] py-[12px] px-[38px] max-w-[197px] rounded-[5px] font-normal text-[24px] leading-[100%] text-black ml-auto duration-300 hover:bg-[rgba(255,255,255,0.8)]  transform active:scale-90"" type="submit">Отправить</button>
+                            </form>
+                        </div>
+                        </div>
+                    </div>             
+             </div>          
+         </section> 
+    </main> 
+     <footer class="bg-[#5855E7] pt-[27px] pb-[28px] mt-[97px]">
+        <div class="containers flex  justify-between items-center">
+            <a href="#">
+                <img src="./images/header-logo.svg" alt="logo" width="156px" height="111px">
+            </a>
+            <div class="flex items-center gap-[37px]">
+                <div>
+                    <p class="font-normal text-[20px] leading-[100%] text-white flex items-center" href="#">Контакты:</p>
+                </div>
+                <div class="flex flex-col justify-center gap-[9px]">
+                    <a class="font-medium text-[20px] leading-[100%] text-white" href="tel:+998971970771">+998971970771</a>
+                    <a class="font-medium text-[20px] leading-[100%] text-white" href="tel:+998971970771">+998971970771</a>
+                </div>
+            </div>
+            <div >
+                <p class="font-semibold text-[20px] leading-[100%] text-white mb-[20px]">Будьте с нами:</p>
+                <div class="flex gap-[21px]">
+                    <img src="./images/telegra-img.svg" alt="logo" width="32" height="32">
+                    <img src="./images/instagram-img.svg" alt="logo" width="32" height="32">
+                    <img src="./images/facebook-img.svg" alt="logo" width="32" height="32">
+                </div>
+            </div>
+           
+        </div>
+
+    </footer> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script> 
 </body>
 </html>
